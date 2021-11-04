@@ -36,3 +36,15 @@ y = y + verticalsp;
 // makes character face the correct way
 if (horizontalsp != 0) image_xscale = sign(horizontalsp);
 
+
+// wall jumping
+
+if (!place_meeting(x, y - 2, oWall) and (place_meeting(x + 3, y, oWall) or place_meeting(x - 3, y, oWall)))
+{
+	grv = 0.1;
+	if (key_up = 1) verticalsp = -6;
+}
+else
+{
+	grv = 0.3;	
+}
