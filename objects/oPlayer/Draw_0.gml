@@ -1,4 +1,4 @@
-/// @description draw and flipping player/gun
+/// @description Draw and flipping player/gun
 
 //flipping player/gun
 var flipdir = (mouse_x > x)*2 - 1;
