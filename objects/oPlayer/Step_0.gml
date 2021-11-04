@@ -5,6 +5,7 @@ key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
 key_up = keyboard_check_pressed(vk_space);
 
+// Calculate Movement
 var move = key_right - key_left;
 
 horizontalsp = move * walkspeed;
@@ -13,7 +14,8 @@ verticalsp = grv + verticalsp;
 if (place_meeting (x, y + 1, oWall)) && (key_up = 1){
 	verticalsp = -7;
 }
-//horizontal 
+
+// Horizontal Movement 
 if (place_meeting (x + horizontalsp , y ,oWall)){
 	while(!place_meeting(x + sign(horizontalsp) , y ,oWall)){
 		x = x + sign(horizontalsp);
@@ -22,7 +24,7 @@ if (place_meeting (x + horizontalsp , y ,oWall)){
 }
 x = x + horizontalsp;
 
-//vertical 
+// Vertical Movement
 if (place_meeting (x , y + verticalsp ,oWall)){
 	while(!place_meeting(x , y + sign(verticalsp) ,oWall)){
 		y = y + sign(verticalsp);
@@ -30,3 +32,4 @@ if (place_meeting (x , y + verticalsp ,oWall)){
 	verticalsp = 0;
 }
 y = y + verticalsp;
+
