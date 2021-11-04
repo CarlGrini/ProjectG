@@ -33,3 +33,6 @@ if (place_meeting (x , y + verticalsp ,oWall)){
 }
 y = y + verticalsp;
 
+// makes character face the correct way
+if (horizontalsp != 0) image_xscale = sign(horizontalsp);
+
