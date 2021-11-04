@@ -5,3 +5,8 @@ verticalsp = 0;
 grv = 0.3;
 walkspeed = 4;
 
+// Mapping wasd to arrow keys
+keyboard_set_map(ord("W"), vk_up);
+keyboard_set_map(ord("S"), vk_down);
+keyboard_set_map(ord("A"), vk_left);
+keyboard_set_map(ord("D"), vk_right);
