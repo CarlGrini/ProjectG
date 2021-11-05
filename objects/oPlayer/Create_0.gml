@@ -4,8 +4,10 @@ horizontalsp = 0;
 verticalsp = 0;
 grv = 0.3;
 walkspeed = 4;
-dashsp = 15;
+
+dashsp = 30;
 dashtime = 0;
+
 // Mapping wasd to arrow keys
 keyboard_set_map(ord("W"), vk_up);
 keyboard_set_map(ord("S"), vk_down);
