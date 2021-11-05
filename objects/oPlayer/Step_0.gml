@@ -4,6 +4,7 @@
 key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
 key_up = keyboard_check_pressed(vk_space);
+dash = keyboard_check_pressed(vk_shift);
 
 // Calculate Movement
 var move = key_right - key_left;
@@ -48,3 +49,11 @@ else
 {
 	grv = 0.3;	
 }
+
+// dashing not working
+dashtime = max(dashtime-1,0);
+if(dash){
+	dashtime = 10;
+	horizontalsp = dashsp;
+}
+if (dashtime > 0 ) verticalsp = 0;
