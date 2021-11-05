@@ -34,17 +34,25 @@ else {
 
 // movement for when player is on the ground
 if (onGround) {
-		if (jump) verticalsp = -7;
+	if (jump) verticalsp = -7;
+	
 } 
+
 
 
 if(dash){
 	dashtime = 12;
-	horizontalsp = move * dashsp;
 }
 if (dashtime > 0) {
+	
+	// dash movement
 	verticalsp = 0;
+	horizontalsp = move * dashsp;
+	
+	// set sprite to dash
+	sprite_index = sPlayerDash;
 }
+
 // Horizontal Movement 
 if (place_meeting (x + horizontalsp , y ,oWall)){
 	while(!place_meeting(x + sign(horizontalsp) , y ,oWall)){
@@ -66,13 +74,7 @@ y = y + verticalsp;
 // makes character face the correct way
 if (horizontalsp != 0) image_xscale = sign(horizontalsp);
 
-//changes animation based on movement
-if (onGround) {
-	sprite_index = sPlayer
-}
-if (dashtime > 0){
-	sprite_index = sPlayerDash;
-}
-if (dashtime = 0){
+//changes sprite back to player when dash ends or on ground
+if (dashtime = 0 or onGround){
 	sprite_index = sPlayer;
 }

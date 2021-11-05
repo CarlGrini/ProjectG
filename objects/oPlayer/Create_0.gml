@@ -5,7 +5,7 @@ verticalsp = 0;
 grv = 0.3;
 walkspeed = 4;
 
-dashsp = 50;
+dashsp = 15;
 dashtime = 0;
 
 // Mapping wasd to arrow keys
