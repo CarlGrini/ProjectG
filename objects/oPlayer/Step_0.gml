@@ -25,7 +25,7 @@ if (againstWall != 0) {
 	
 	if (jump) {
 		verticalsp = -5;
-		horizontalsp = 10;
+		horizontalsp = -10 * move;
 	}
 }
 else {
