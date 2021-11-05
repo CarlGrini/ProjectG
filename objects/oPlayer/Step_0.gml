@@ -13,7 +13,7 @@ var againstWall = place_meeting(x - 3, y, oWall) - place_meeting(x + 3, y, oWall
 // Calculate Movement
 var move = key_right - key_left;
 
-dashtime = max(dashtime-1,0);
+dashtime = max(dashtime - 1, 0);
 
 horizontalsp = move * walkspeed;
 verticalsp = grv + verticalsp;
@@ -42,8 +42,9 @@ if(dash){
 	dashtime = 10;
 	horizontalsp = move * dashsp;
 }
-if (dashtime > 0) verticalsp = 0;
-
+if (dashtime > 0) {
+	verticalsp = 0;
+}
 // Horizontal Movement 
 if (place_meeting (x + horizontalsp , y ,oWall)){
 	while(!place_meeting(x + sign(horizontalsp) , y ,oWall)){
@@ -64,3 +65,14 @@ y = y + verticalsp;
 
 // makes character face the correct way
 if (horizontalsp != 0) image_xscale = sign(horizontalsp);
+
+//changes animation based on movement
+if (onGround) {
+	sprite_index = sPlayer
+}
+if (dashtime > 0){
+	sprite_index = sPlayerDash;
+}
+if (dashtime = 0){
+	sprite_index = sPlayer;
+}
