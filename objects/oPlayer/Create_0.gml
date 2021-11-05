@@ -7,6 +7,7 @@ walkspeed = 4;
 
 dashsp = 15;
 dashtime = 0;
+dashCooldown = 0;
 
 // Mapping wasd to arrow keys
 keyboard_set_map(ord("W"), vk_up);

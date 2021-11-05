@@ -14,6 +14,7 @@ var againstWall = place_meeting(x - 3, y, oWall) - place_meeting(x + 3, y, oWall
 var move = key_right - key_left;
 
 dashtime = max(dashtime - 1, 0);
+dashCooldown = max(dashCooldown - 1, 0);
 
 horizontalsp = move * walkspeed;
 verticalsp = grv + verticalsp;
@@ -35,14 +36,14 @@ else {
 // movement for when player is on the ground
 if (onGround) {
 	if (jump) verticalsp = -7;
-	
 } 
 
 
-
-if(dash){
+if(dash and dashCooldown <= 0){
 	dashtime = 12;
+	dashCooldown = 30;
 }
+
 if (dashtime > 0) {
 	
 	// dash movement
@@ -60,7 +61,7 @@ if (place_meeting (x + horizontalsp , y ,oWall)){
 	}
 	horizontalsp = 0;
 }
-x = x + horizontalsp;
+x += horizontalsp;
 
 // Vertical Movement
 if (place_meeting (x , y + verticalsp ,oWall)){
@@ -69,12 +70,12 @@ if (place_meeting (x , y + verticalsp ,oWall)){
 	}
 	verticalsp = 0;
 }
-y = y + verticalsp;
+y += verticalsp;
 
 // makes character face the correct way
 if (horizontalsp != 0) image_xscale = sign(horizontalsp);
 
-//changes sprite back to player when dash ends or on ground
+// changes sprite back to player when dash ends or on ground
 if (dashtime = 0 or onGround){
 	sprite_index = sPlayer;
 }
