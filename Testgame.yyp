@@ -7,7 +7,7 @@
     {"id":{"name":"sBullet","path":"sprites/sBullet/sBullet.yy",},"order":3,},
     {"id":{"name":"sPlayerDash","path":"sprites/sPlayerDash/sPlayerDash.yy",},"order":4,},
     {"id":{"name":"oGun","path":"objects/oGun/oGun.yy",},"order":3,},
-    {"id":{"name":"oPlayerDash","path":"objects/oPlayerDash/oPlayerDash.yy",},"order":4,},
+    {"id":{"name":"sGunFiring","path":"sprites/sGunFiring/sGunFiring.yy",},"order":5,},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
     {"id":{"name":"oBullet","path":"objects/oBullet/oBullet.yy",},"order":2,},

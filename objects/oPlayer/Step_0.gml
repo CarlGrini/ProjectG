@@ -39,7 +39,7 @@ if (onGround) {
 
 
 if(dash){
-	dashtime = 10;
+	dashtime = 12;
 	horizontalsp = move * dashsp;
 }
 if (dashtime > 0) {

@@ -30,3 +30,10 @@ else
 {
 	image_yscale = 1;
 }
+
+if(mouse_check_button(mb_left)){
+	image_index = sGunFiring;
+}
+else{
+	image_index = sGun;
+}
