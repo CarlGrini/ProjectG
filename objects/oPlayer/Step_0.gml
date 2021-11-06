@@ -28,6 +28,7 @@ if (againstWall != 0) {
 		verticalsp = -5;
 		horizontalsp = -10 * move;
 		extraJump = true;
+		canDash = true;
 	}
 }
 else {
