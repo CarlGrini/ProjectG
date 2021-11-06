@@ -27,6 +27,7 @@ if (againstWall != 0) {
 	if (jump) {
 		verticalsp = -5;
 		horizontalsp = -10 * move;
+		extraJump = true;
 	}
 }
 else {
@@ -35,13 +36,26 @@ else {
 
 // movement for when player is on the ground
 if (onGround) {
-	if (jump) verticalsp = -7;
-} 
+	extraJump = true;
+	canDash = false;
+	if (jump) {
+		verticalsp = -7;
+		canDash = true;
+	}
 
+	
+}
+else {
+	if (jump and extraJump and againstWall == 0){
+		verticalsp = -7;
+		extraJump = false;
+		canDash = true;
+	}
+}
 
-if(dash and dashCooldown <= 0){
+if (dash and canDash){
 	dashtime = 12;
-	dashCooldown = 30;
+	canDash = false;
 }
 
 if (dashtime > 0) {
